@@ -1,0 +1,309 @@
+html { font-size: 130%; }
+
+
+:root {
+  --fondo: #dc322c;
+  --fondo-brillo: #b48b8b;
+  --texto: #f0f0f3;
+  --texto-suave: #040404;
+  --azul: #7614cc;
+  --turquesa: #d518ff;
+  --rojo: #ef3b1d;
+  --naranja: #b60cf8;
+  --tarjeta: rgba(150, 34, 71, 0.262);
+  --borde: rgb(152, 45, 45);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body { height: 100%; }
+
+body {
+  font-family: "DM Sans", system-ui, sans-serif;
+  color: var(--texto);
+  background: var(--fondo);
+}
+
+/* ---------- Sección ---------- */
+.about {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 4rem;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  background:
+    radial-gradient(60% 50% at 75% 45%, var(--fondo-brillo), transparent 70%);
+}
+
+.about__texto { max-width: 680px; }
+
+/* ---------- Etiqueta, título e intro ---------- */
+.about__etiqueta {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  background: linear-gradient(90deg, var(--azul), var(--turquesa));
+}
+
+.about__titulo {
+  margin: 1.4rem 0 1.2rem;
+  font-family: "Outfit", sans-serif;
+  font-weight: 800;
+  font-size: clamp(2.8rem, 6vw, 4.4rem);
+  line-height: 1.05;
+}
+
+.degradado {
+  background: linear-gradient(90deg, var(--azul), var(--turquesa));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.about__intro {
+  color: var(--texto-suave);
+  line-height: 1.65;
+  margin-bottom: 1.6rem;
+  font-size: 1.15rem;
+}
+
+/* ---------- Tarjetas de gustos ---------- */
+.gustos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.gusto {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  padding: 1.2rem;
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  background: var(--tarjeta);
+  cursor: default;
+}
+
+.gusto__cabecera {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.gusto__icono {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  font-size: 1.25rem;
+  background: linear-gradient(135deg, var(--rojo), var(--naranja));
+}
+
+.gusto h3 {
+  font-family: "Outfit", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.gusto p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--texto-suave);
+}
+
+.gusto:hover { border-color: rgba(255, 106, 26, 0.5); }
+
+/* ---------- Frase ---------- */
+.about__frase {
+  margin-top: 1.6rem;
+  padding-left: 1rem;
+  border-left: 3px solid var(--azul);
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--texto-suave);
+}
+
+/* ---------- Foto principal ---------- */
+.about__foto {
+  position: relative;
+  justify-self: center;
+  width: min(100%, 500px);
+}
+
+.about__foto img, .about__foto video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 24px;
+  border: 1px solid var(--borde);
+  box-shadow: 0 30px 80px rgba(20, 184, 166, 0.15);
+}
+
+.about__foto video { cursor: pointer; }
+
+.sonido {
+  position: absolute;
+  left: 0.8rem;
+  top: 0.8rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  background: rgba(5, 11, 24, 0.7);
+  border: 1px solid var(--borde);
+  pointer-events: none; /* para que el click llegue al video */
+}
+
+.about__insignia {
+  position: absolute;
+  right: -1rem;
+  bottom: 1.2rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  background: linear-gradient(135deg, var(--rojo), var(--naranja));
+  box-shadow: 0 10px 30px rgba(239, 59, 29, 0.35);
+}
+
+/* ---------- Lente que sigue al mouse ---------- */
+.lente {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 180px;
+  height: 180px;
+  margin: -90px 0 0 -90px; /* centra el círculo en el cursor */
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.85);
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+  pointer-events: none;
+  opacity: 0;
+  scale: 0.6;
+  transition: opacity 0.2s, scale 0.2s;
+  z-index: 50;
+}
+
+.lente.activo {
+  opacity: 1;
+  scale: 1;
+}
+
+/* En celular no hay mouse: se oculta el lente */
+@media (hover: none) {
+  .lente { display: none; }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 860px) {
+  .about {
+    grid-template-columns: 1fr;
+    padding: 3rem 1.2rem;
+  }
+  .about__foto { order: -1; width: min(100%, 300px); }
+  .about__insignia { right: 0.5rem; }
+}
+
+@media (max-width: 480px) {
+  .gustos { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lente { transition: none; }
+}
+
+/* ============================================================
+   AJUSTES PARA TABLET Y CELULAR (agregado al final)
+   ============================================================ */
+@media (max-width: 860px) {
+  html { font-size: 100%; }          /* baja el 130% de escritorio */
+
+  .about {
+    gap: 2rem;
+    padding: 2rem 1.2rem 3rem;
+    min-height: auto;
+  }
+
+  /* 1º video  ->  2º introducción  ->  3º gustos */
+  .about__foto {
+    order: -1;
+    width: min(100%, 420px);
+  }
+
+  .about__texto { max-width: 100%; }
+
+  .about__titulo { font-size: clamp(2.2rem, 9vw, 3rem); }
+  .about__intro  { font-size: 1.05rem; }
+}
+
+@media (max-width: 560px) {
+  .gusto p { font-size: 0.9rem; }
+}
+
+
+/* ============================================================
+   VIDEO HORIZONTAL REAL (agregado al final)
+   ============================================================ */
+.about__foto video {
+  aspect-ratio: auto;     /* usa la proporción original del video */
+  height: auto;
+  object-fit: contain;    /* se ve completo, sin recortes */
+  background: #000;       /* fondo si sobran franjas */
+}
+
+@media (min-width: 861px) {
+  .about {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); /* columna del video más ancha */
+  }
+  .about__foto {
+    width: 100%;          /* ocupa toda su columna */
+    max-width: 760px;
+  }
+}
+
+/* ============================================================
+   MODO CELULAR AL ACHICAR LA VENTANA (agregado al final)
+   ============================================================ */
+@media (max-width: 1100px) {
+  html { font-size: 105%; }
+
+  .about {
+    grid-template-columns: 1fr;   /* una sola columna */
+    gap: 2rem;
+    padding: 2rem 1.2rem 3rem;
+    min-height: auto;
+  }
+
+  /* 1º video  ->  2º introducción  ->  3º gustos */
+  .about__foto {
+    order: -1;
+    width: 100%;
+    max-width: 640px;
+    justify-self: center;
+  }
+
+  .about__texto {
+    max-width: 100%;
+  }
+
+  .about__titulo { font-size: clamp(2.2rem, 8vw, 3.2rem); }
+  .about__insignia { right: 0.5rem; }
+}
+
+@media (max-width: 640px) {
+  html { font-size: 100%; }
+  .gustos { grid-template-columns: 1fr; }   /* tarjetas una debajo de otra */
+}
