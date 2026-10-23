@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Colección Esencial | Productos que elijo cada día</title>
+    <meta name="description" content="Conoce los objetos que me acompañan todos los días: compañía, sonido, precisión y escritura.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        details > summary::-webkit-details-marker { display: none; }
+        .card-img { transition: transform .5s ease; }
+        .card:hover .card-img { transform: scale(1.08); }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-red-950 via-red-900 to-black text-white min-h-screen antialiased">
+
+    <!-- HERO -->
+    <header class="text-center px-6 pt-16 pb-10 max-w-3xl mx-auto">
+        <span class="inline-block text-xs tracking-[0.3em] uppercase bg-white/10 border border-white/20 rounded-full px-4 py-1 mb-6">
+           
+        </span>
+        <h1 class="text-4xl sm:text-6xl font-extrabold leading-tight">
+            Los objetos que
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-300 to-yellow-300">hacen tu día mejor</span>
+        </h1>
+        <p class="mt-5 text-lg text-white/75">
+        </p>
+        
+        </a>
+    </header>
+
+    
+    <main id="productos" class="max-w-6xl mx-auto px-4 pb-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 items-start">
+
+        <!-- Miel -->
+        <details class="card group bg-white text-gray-900 rounded-2xl shadow-xl overflow-hidden">
+            <summary class="cursor-pointer list-none select-none">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="/img/miel.jpeg" alt="Miel (Yupi)" class="card-img w-full h-full object-cover" />
+                    <span class="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full"></span>
+                </div>
+                <div class="p-5">
+                    <h2 class="text-xl font-extrabold">Miel <span class="text-red-500">(Yupi)</span></h2>
+                    <p class="text-sm text-gray-600 mt-1">Compañía incondicional, alegría garantizada.</p>
+                    <span class="inline-block mt-3 text-sm font-semibold text-red-600 group-open:hidden"></span>
+                </div>
+            </summary>
+            <div class="px-5 pb-5">
+                <p class="text-sm text-gray-700 mb-3">La razón por la que cada llegada a casa se siente como una fiesta.</p>
+                <img src="/img/miel.jpeg" onclick="abrirImagenGrande(this.src)" alt="Miel ampliada"
+                     class="w-full rounded-lg cursor-zoom-in hover:opacity-90 transition" />
+                <p class="text-xs text-gray-400 mt-2 text-center">Toca la imagen para ampliarla</p>
+            </div>
+        </details>
+
+        <!-- Audífonos -->
+        <details class="card group bg-white text-gray-900 rounded-2xl shadow-xl overflow-hidden">
+            <summary class="cursor-pointer list-none select-none">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="/img/audifonos.jpeg" alt="Audífonos Redmi" class="card-img w-full h-full object-cover" />
+                    <span class="absolute top-3 left-3 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full"></span>
+                </div>
+                <div class="p-5">
+                    <h2 class="text-xl font-extrabold">Audífonos <span class="text-blue-500">Redmi</span></h2>
+                    <p class="text-sm text-gray-600 mt-1">Tu música, tu mundo, sin interrupciones.</p>
+                    <span class="inline-block mt-3 text-sm font-semibold text-blue-600 group-open:hidden"></span>
+                </div>
+            </summary>
+            <div class="px-5 pb-5">
+                <p class="text-sm text-gray-700 mb-3">Sonido nítido para estudiar, programar o desconectarte cuando lo necesites.</p>
+                <img src="/img/audifonos.jpeg" onclick="abrirImagenGrande(this.src)" alt="Audífonos ampliados"
+                     class="w-full rounded-lg cursor-zoom-in hover:opacity-90 transition" />
+                <p class="text-xs text-gray-400 mt-2 text-center">Toca la imagen para ampliarla</p>
+            </div>
+        </details>
+
+        <!-- Mouse -->
+        <details class="card group bg-white text-gray-900 rounded-2xl shadow-xl overflow-hidden">
+            <summary class="cursor-pointer list-none select-none">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="/img/mause.jpeg" alt="Mouse convencional" class="card-img w-full h-full object-cover" />
+                    <span class="absolute top-3 left-3 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full"></span>
+                </div>
+                <div class="p-5">
+                    <h2 class="text-xl font-extrabold">Mouse <span class="text-orange-500">convencional</span></h2>
+                    <p class="text-sm text-gray-600 mt-1">Precisión y control en cada clic.</p>
+                    <span class="inline-block mt-3 text-sm font-semibold text-orange-600 group-open:hidden"></span>
+                </div>
+            </summary>
+            <div class="px-5 pb-5">
+                <p class="text-sm text-gray-700 mb-3">Cómodo, confiable y listo para largas jornadas de trabajo.</p>
+                <img src="/img/mause.jpeg" onclick="abrirImagenGrande(this.src)" alt="Mouse ampliado"
+                     class="w-full rounded-lg cursor-zoom-in hover:opacity-90 transition" />
+                <p class="text-xs text-gray-400 mt-2 text-center">Toca la imagen para ampliarla</p>
+            </div>
+        </details>
+
+        <!-- Lapicero -->
+        <details class="card group bg-white text-gray-900 rounded-2xl shadow-xl overflow-hidden">
+            <summary class="cursor-pointer list-none select-none">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="/img/lapicero.jpeg" alt="Lapicero rojo" class="card-img w-full h-full object-cover" />
+                    <span class="absolute top-3 left-3 bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded-full"></span>
+                </div>
+                <div class="p-5">
+                    <h2 class="text-xl font-extrabold">Lapicero <span class="text-red-500">Rojo</span></h2>
+                    <p class="text-sm text-gray-600 mt-1">Cada idea importante merece destacarse.</p>
+                    <span class="inline-block mt-3 text-sm font-semibold text-yellow-600 group-open:hidden"></span>
+                </div>
+            </summary>
+            <div class="px-5 pb-5">
+                <p class="text-sm text-gray-700 mb-3">Trazo firme para anotar, corregir y subrayar lo que cuenta.</p>
+                <img src="/img/lapicero.jpeg" onclick="abrirImagenGrande(this.src)" alt="Lapicero ampliado"
+                     class="w-full rounded-lg cursor-zoom-in hover:opacity-90 transition" />
+                <p class="text-xs text-gray-400 mt-2 text-center">Toca la imagen para ampliarla</p>
+            </div>
+        </details>
+    </main>
+
+    <!-- CTA FINAL -->
+
+    
+
+    <footer class="text-center text-xs text-white/40 pb-8">
+        © 2026 Colección Esencial · Hecho con Tailwind CSS
+    </footer>
+
+    <!-- MODAL -->
+    <div id="pantallaCompletaModal" onclick="cerrarImagenGrande()"
+         class="fixed inset-0 bg-black/90 flex items-center justify-center z-50 p-4 invisible opacity-0 transition-all duration-300 cursor-zoom-out">
+        <button class="absolute top-4 right-6 text-white/70 text-5xl font-light hover:text-white transition-colors" aria-label="Cerrar">&times;</button>
+        <div class="max-w-4xl max-h-[90vh] flex items-center justify-center p-2" onclick="event.stopPropagation()">
+            <img id="imagenDestacada" src="" alt="Visualización grande"
+                 class="w-full h-auto max-h-[85vh] object-contain rounded-md shadow-2xl scale-95 transition-transform duration-300" />
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('pantallaCompletaModal');
+        const imagen = document.getElementById('imagenDestacada');
+
+        function abrirImagenGrande(src) {
+            imagen.src = src;
+            modal.classList.remove('invisible', 'opacity-0');
+            setTimeout(() => {
+                imagen.classList.remove('scale-95');
+                imagen.classList.add('scale-100');
+            }, 10);
+        }
+
+        function cerrarImagenGrande() {
+            imagen.classList.remove('scale-100');
+            imagen.classList.add('scale-95');
+            modal.classList.add('invisible', 'opacity-0');
+        }
+
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') cerrarImagenGrande(); });
+    </script>
+</body>
+</html>
