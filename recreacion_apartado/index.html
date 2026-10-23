@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sobre mí</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;800&family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <section class="about" id="about">
+    <div class="about__texto">
+      <span class="about__etiqueta">Hablamos sin poner el codigo en el medio</span>
+
+      <h2 class="about__titulo">
+        <span class="degradado">Un poco de</span> mi vida
+      </h2>
+
+      <p class="about__intro">
+        Mi vida se mantiene muy al corriente de lo que pasa en el exterior, me mantengo pendiente de ello y actualizado.
+        Mi pasion mas grande es el anime , los videojuegos y el gimnasio, son cosas que me sacan de mi sona de confort.
+      </p>
+
+      <div class="gustos" id="gustos"></div>
+
+      <blockquote class="about__frase">
+        “La vida  es mas bella cuando sabes vivirla y lo que conlleva esto.”
+      </blockquote>
+    </div>
+
+    <div class="about__foto" data-foto="../img/yo.jpeg">
+      <video src="../video/anime.mp4"
+             id="videoAnime"
+             poster="../img/yo.jpeg"
+             autoplay muted loop playsinline>
+      </video>
+      <span class="sonido" id="sonido">🔇 Click para activar sonido</span>
+      <span class="about__insignia">Esneider · Dev</span>
+    </div>
+
+    <div class="lente" id="lente" aria-hidden="true"></div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
