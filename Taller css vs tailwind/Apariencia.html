@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apariencia | Taller CSS vs Tailwind</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .tama {
+      max-width: 20rem !important;
+      max-height: 20rem !important;
+      height: 10rem !important;
+      overflow-y: scroll !important;
+      scrollbar-width: thin !important;
+      background-color: rgb(46, 63, 139) !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="bg-slate-900 px-4 py-5 text-white">
+    <nav class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4" aria-label="Secciones principales">
+      <span class="text-xl font-bold">Taller CSS vs Tailwind</span>
+      <ul class="flex flex-wrap gap-2">
+        <li><a href="Apariencia.html" aria-current="page"
+            class="rounded-md bg-white px-4 py-2 font-semibold text-slate-900">Apariencia</a></li>
+        <li><a href="diseño.html" class="rounded-md px-4 py-2 font-semibold text-white hover:bg-slate-700">Diseño</a>
+        </li>
+        <li><a href="animaciones.html"
+            class="rounded-md px-4 py-2 font-semibold text-white hover:bg-slate-700">Animaciones</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="container mx-auto max-w-6xl px-4 py-8">
+    <div
+      class="w-[1086px] grid md:grid-cols-4 bg-gray-100 flex gap-1 items-start justify-start min-h-screen flex flex-wrap p-4">
+
+      <div class="tama bg-white p-6 shadow-md items-start">
+        <h3 class="text-lg font-semibold text-gray-800">Color en el texto</h3>
+        <p class="mt-2  text-blue-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu quam ac massa
+          rhoncus accumsan ac ut mi. </p>
+      </div>
+
+      <div class="tama bg-white p-6 shadow-md items-start">
+        <h3 class="text-lg font-semibold text-gray-800">Color fondo</h3>
+        <p class="mt-2 text-gray-600 bg-yellow-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu
+          quam ac massa rhoncus accumsan ac ut mi.</p>
+      </div>
+
+      <div class="tama bg-white p-6 shadow-md items-start">
+        <h3 class="text-lg font-semibold text-gray-800"">
+    Sombra de texto
+  </h3>
+  <p class=" mt-2" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu quam ac massa rhoncus accumsan ac ut mi.
+          </p>
+      </div>
+
+      <div class="tama bg-white p-6 shadow-md border border-pink-400 items-start">
+        <h3 class="text-lg font-semibold text-gray-800">Color del borde</h3>
+        <p class="mt-2 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu quam ac massa rhoncus
+          accumsan ac ut mi. .</p>
+      </div>
+
+      <div class="tama bg-white p-6 shadow-md items-start">
+        <h3 class="text-lg font-semibold text-gray-800">Alineación de texto</h3>
+        <p class="mt-2 text-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu quam ac massa
+          rhoncus accumsan ac ut mi. .</p>
+      </div>
+
+      <div class="tama bg-white p-6 shadow-md items-start">
+        <h3 class="text-lg font-semibold text-gray-800">Decoración de texto</h3>
+        <p class="mt-2 underline">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu quam ac massa
+          rhoncus accumsan ac ut mi. .</p>
+      </div>
+
+      <div class="tama bg-white p-6 shadow-md items-start">
+        <h3 class="text-lg font-semibold text-gray-800">Transformación de texto</h3>
+        <p class="mt-2 uppercase">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu quam ac massa
+          rhoncus accumsan ac ut mi. .</p>
+      </div>
+
+      <div class="tama bg-white p-6 shadow-md items-start">
+        <h3 class="text-lg font-semibold text-gray-800">Sombra de caja</h3>
+        <p class="mt-2 shadow-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu quam ac massa
+          rhoncus accumsan ac ut mi. .</p>
+      </div>
+
+      <div class="tama bg-white p-6 shadow-md items-start">
+        <h3 class="text-lg font-semibold text-gray-800">Opacidad</h3>
+        <p class="mt-2 opacity-50">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu quam ac massa
+          rhoncus accumsan ac ut mi. .</p>
+      </div>
+
+      <div class="tama bg-white p-6 shadow-md items-start">
+        <h3 class="text-lg font-semibold text-gray-800">Familia de fuentes</h3>
+        <p class="mt-2 font-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu quam ac massa
+          rhoncus accumsan ac ut mi. .</p>
+      </div>
+
+      <div class="tama bg-white p-6 shadow-md items-start">
+        <h3 class="text-lg font-semibold text-gray-800">Tamaño de fuente</h3>
+        <p class="mt-2 text-xs">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu quam ac massa
+          rhoncus
+          accumsan ac ut mi. .</p>
+      </div>
+
+      <div class="tama bg-white p-6 shadow-md items-start">
+        <h3 class="text-lg font-semibold text-gray-800">Grosor de fuente</h3>
+        <p class="mt-2 font-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu quam ac massa
+          rhoncus accumsan ac ut mi. .</p>
+      </div>
+
+      <div class="tama bg-white p-6 shadow-md items-start">
+        <h3 class="text-lg font-semibold text-gray-800">Estilo de fuente</h3>
+        <p class="mt-2 italic">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu quam ac massa rhoncus
+          accumsan ac ut mi. .</p>
+      </div>
+
+      <div class="tama bg-white p-6 shadow-md items-start">
+        <h3 class="text-lg font-semibold text-gray-800">Desbordamiento de texto</h3>
+        <p class="mt-2 truncate">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu quam ac massa
+          rhoncus
+          accumsan ac ut mi. .</p>
+        <p class="mt-2 ">truncate , text-clip , text-ellipsis</p>
+      </div>
+
+      <div class="tama bg-white p-6 shadow-md items-start">
+        <h3 class="text-lg font-semibold text-gray-800">Color de decoración de texto</h3>
+        <p class="mt-2 underline decoration-dotted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu
+          quam ac massa rhoncus accumsan ac ut mi. .</p>
+        <p class="mt-2 "> underline -> decoration-red-500 , decoration-blue-500</p>
+      </div>
+
+      <div class="tama bg-white p-6 shadow-md items-start">
+        <h3 class="text-lg font-semibold text-gray-800">Estilo de decoración de texto</h3>
+        <p class="mt-2 underline decoration-dashed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu
+          quam ac massa rhoncus accumsan ac ut mi. .</p>
+        <p class="mt-2 "> underline -> decoration-inherit, decoration-dashed, decoration-red-500 , decoration-blue-500
+        </p>
+      </div>
+
+      <div class=" tama bg-white p-6 shadow-md items-start">
+        <h3 class="text-lg font-semibold text-gray-800">Grosor de decoración de texto</h3>
+        <p class="mt-2 underline decoration-dashed decoration-4">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+         Aliquam eu quam ac massa rhoncus accumsan ac ut mi.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
